@@ -79,7 +79,7 @@ export default class App extends Component {
 initateEthereum = async () => {
   if (typeof window.web3 !== 'undefined') {
   const that = this;
-  this.setState({percentageLoader: "Awaiting"});
+  this.setState({percentageLoader: "Web3 Sign-In"});
   this.getEthereumAccount = this.getEthereumAccount.bind(this);
     try {            
       await window.web3.currentProvider.enable().finally(
