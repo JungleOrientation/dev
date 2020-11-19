@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet');
+
 .logo {
   display: flex;
   justify-content: flex-end;
@@ -6,46 +8,124 @@
   margin-top: 10%;
 }
 
-.header {
-  text-align: center;
-  margin-top: 5%;
+body {
+  background-color: black;
+}
+
+/* STANDARD IMPORTS */
+.shareButtonSpacing {
+  width: 2.5vh;
+  height: 2.5vh;
+  margin-right: .3vh;
 }
 
 .text {
-  margin-top: 6% !important;
+  color: #C0C0C0 !important;
+  font-family: 'Noto Sans', sans-serif !important;
 }
+
+
 
 .input {
-  margin-left: -18% !important;
+  color: #C0C0C0 !important;
+  font-family: 'Noto Sans', sans-serif !important;
+}
+ 
+.headerText {
+  color: #C0C0C0 !important;
+  font-family: 'Noto Sans', sans-serif !important;
+  background: -webkit-linear-gradient(left, #C0C0C0 0%,#D3D3D3 24%,#D3D3D3 36%,#C0C0C0 46%,#C0C0C0 52%,#C0C0C0 58%,#C0C0C0 67%,#000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  transition: 25s;
+  animation: font-shine 25s infinite linear;
 }
 
-.wp {
-  margin-top: 5% !important;
-  margin-left: 5% !important;
+
+/* BUTTONS */
+.buttonFormat {
+  font-family: 'Noto Sans', sans-serif !important;
 }
+
+.buttonFormat:hover {
+  color: green;
+  cursor: pointer;
+}
+
+.bottomButton {
+  margin-top: 3vh !important;
+  margin-bottom: 3vh !important;
+}
+
+/* CARD */
+
+.adjustCardBody {
+  background-color: #000000 !important;
+}
+
+.cardBody {
+  color: #C0C0C0;
+  background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.botomofPage {
+  margin-bottom: 100vw !important;
+}
+
+.whiteHRLINE {
+  background-color: #C0C0C0 !important;
+  height: .1vh !important;
+}
+
+.cardFontMain {
+  text-align: center;
+  background: -webkit-linear-gradient(left, #C0C0C0 0%,#e5e5e5 24%,#D3D3D3 36%,#C0C0C0 46%,#C0C0C0 52%,#C0C0C0 58%,#cccccc 67%,#D3D3D3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+/* LOADER */
+
+.loaderLight {
+  letter-spacing: .5vh;
+  background: -webkit-linear-gradient(left, #C0C0C0 0%,#D3D3D3 24%,#D3D3D3 36%,#C0C0C0 46%,#C0C0C0 52%,#C0C0C0 58%,#C0C0C0 67%,#000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 300%;
+  transition: 3s;
+  animation: font-shine 3s infinite linear;
+}
+
+@keyframes font-shine {
+  0% {background-position: 0% 0}
+  100% {background-position: -100% 0}
+}
+
 
 @media screen and (max-width:1200px) { 
-  .input {
-    margin-left: 0% !important;
-    width: 200% !important;
-  }
 
-  .text {
-    margin-top: 9% !important;
-    margin-left: -15% !important;
+
+  .wp {
+    margin-top: 3% !important;
+    margin-left: 3% !important;
+    width: 130px !important;
+    height: 55px !important;
+    font-size: 1em !important;
   }
 }
 
 @media screen and (max-width:767px) { 
-  .input {
-    margin-left: -27% !important;
-    width: 160% !important;
-    text-align: center;
-  }
 
-  .text {
-    margin-top: 0% !important;
-    margin-left: 0% !important;
+  .wp {
+    margin-top: 3% !important;
+    width: 90px !important;
+    height: 40px !important;
   }
 }
 
@@ -53,16 +133,6 @@
   .wp {
     width: 80% !important;
     font-size: 8px !important;
-  }
-
-  .input {
-    margin-left: -70% !important;
-    width: 240% !important;
-    text-align: center;
-  }
-
-  .bottomButton {
-    margin-bottom: 80px !important;
   }
 
   .logo {
@@ -73,8 +143,9 @@
     margin-top: 3%;
   }
 
-  .text {
-    margin-top: 0% !important;
-    margin-left: 0% !important;
+  .wp {
+    margin-top: 3% !important;
+    width: 70px !important;
+    height: 30px !important;
   }
 }
