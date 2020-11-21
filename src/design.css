@@ -40,6 +40,8 @@ body {
   background-size: 300%;
   transition: 25s;
   animation: font-shine 25s infinite linear;
+  margin-top: 3vw !important;
+  margin-bottom: 3vw !important;
 }
 
 
@@ -78,6 +80,10 @@ body {
 .whiteHRLINE {
   background-color: #C0C0C0 !important;
   height: .1vh !important;
+}
+
+.lastCard { 
+  margin-bottom: 10vw !important;
 }
 
 .cardFontMain {

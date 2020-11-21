@@ -19,14 +19,15 @@ import './design.css';
 import twitter from './twitterLogo.png';
 import telegram from './telegramLogo.png';
 
+//REBASS STYLES
 import {
   Button,
   Text
 } from 'rebass';
+import preset from '@rebass/preset';
 
 import { Input } from '@rebass/forms';
 import Bucc from "./black.png";
-import preset from '@rebass/preset';
 import Web3 from 'web3';
 import { buccm2ABI } from './abi.js';
 
@@ -313,7 +314,7 @@ sendTx = async () => {
                       <Col md={1}>
                       </Col>
                       <Col md={10}>  
-                      <Card variant="dark" bg="blackbg" className="text-center">
+                      <Card variant="dark" bg="blackbg" className="text-center lastCard">
                       <Card.Body className="adjustCardBody">
                                 <Card.Text className="cardBody">
                                 <hr className="whiteHRLINE" />
