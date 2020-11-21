@@ -5,7 +5,6 @@
   justify-content: flex-end;
   width: 50%;
   margin: auto;
-  margin-top: 10%;
 }
 
 body {
@@ -17,14 +16,13 @@ body {
   width: 2.5vh;
   height: 2.5vh;
   margin-right: .3vh;
+  margin-top: -3vw !important;
 }
 
 .text {
   color: #C0C0C0 !important;
   font-family: 'Noto Sans', sans-serif !important;
 }
-
-
 
 .input {
   color: #C0C0C0 !important;
@@ -73,10 +71,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.botomofPage {
-  margin-bottom: 100vw !important;
-}
-
 .whiteHRLINE {
   background-color: #C0C0C0 !important;
   height: .1vh !important;
@@ -113,45 +107,6 @@ body {
   100% {background-position: -100% 0}
 }
 
-
-@media screen and (max-width:1200px) { 
-
-
-  .wp {
-    margin-top: 3% !important;
-    margin-left: 3% !important;
-    width: 130px !important;
-    height: 55px !important;
-    font-size: 1em !important;
-  }
-}
-
-@media screen and (max-width:767px) { 
-
-  .wp {
-    margin-top: 3% !important;
-    width: 90px !important;
-    height: 40px !important;
-  }
-}
-
-@media screen and (max-width:360px) { 
-  .wp {
-    width: 80% !important;
-    font-size: 8px !important;
-  }
-
-  .logo {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    margin: auto;
-    margin-top: 3%;
-  }
-
-  .wp {
-    margin-top: 3% !important;
-    width: 70px !important;
-    height: 30px !important;
-  }
+.wp {
+  margin-bottom: 3vw !important;
 }
