@@ -38,14 +38,13 @@ body {
   background-size: 300%;
   transition: 25s;
   animation: font-shine 25s infinite linear;
-  margin-top: 3vw !important;
-  margin-bottom: 3vw !important;
 }
 
 
 /* BUTTONS */
 .buttonFormat {
   font-family: 'Noto Sans', sans-serif !important;
+  margin-bottom: 2vw !important;
 }
 
 .buttonFormat:hover {
@@ -77,7 +76,7 @@ body {
 }
 
 .lastCard { 
-  margin-bottom: 10vw !important;
+  margin-bottom: 5vw !important;
 }
 
 .cardFontMain {

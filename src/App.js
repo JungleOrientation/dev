@@ -74,7 +74,6 @@ export default class App extends Component {
     setTimeout(function(){that.setState({percentageLoader: "95%", loaderCSS: "loaderCoverSheet2"});
     document.body.style.overflowY = "scroll";}, 280);
     setTimeout(function(){that.setState({loader: false, loaderCSS: "loaderCoverSheet2"});}, 300);
- 
     }
 
 initateEthereum = async () => {
@@ -205,13 +204,16 @@ sendTx = async () => {
         <Container>
           <Row>
               <Col>
-              <a href="https://buccaneer.eth" target="_blank"><Button className="wp buttonFormat" theme={preset} variant='outline' mr={2}>Homepage</Button></a>
+              <a href="https://buccaneer.eth" target="_blank"><Button className="buttonFormat" theme={preset} variant='outline' mr={2}>Homepage</Button></a>
               </Col> 
               <Col>
-              <a href="https://ipfs.io/ipfs/QmQfDJCw6X2cvgaA3sB3YnyJrjLSgJb1N5xzzC8iszr7Tw" target="_blank"><Button className="wp buttonFormat" theme={preset} variant='outline' mr={2}>Manual</Button></a>
+              <a href="https://ipfs.io/ipfs/QmQfDJCw6X2cvgaA3sB3YnyJrjLSgJb1N5xzzC8iszr7Tw" target="_blank"><Button className="buttonFormat" theme={preset} variant='outline' mr={2}>Manual</Button></a>
               </Col>
               <Col>
-              <a href="https://buccfarm.eth/" target="_blank"><Button className="wp buttonFormat" theme={preset} variant='outline' mr={2}>Sargasso</Button></a>
+              <a href="https://buccfarm.eth/" target="_blank"><Button className="buttonFormat" theme={preset} variant='outline' mr={2}>Sargasso</Button></a>
+              </Col>
+              <Col>
+              <a href="https://bucctumbler.eth/" target="_blank"><Button className="buttonFormat" theme={preset} variant='outline' mr={2}>Havok</Button></a>
               </Col>
           </Row>
         </Container> 
@@ -237,11 +239,13 @@ sendTx = async () => {
                   </Col>
                   <Col md={6} className="text-center">
                   <img src={Bucc} className="logo" />
+                  <br />
                   <Text className="headerText"
                     fontSize={[ 3, 4, 5 ]}
                     fontWeight='bold'>
                     Bermuda
                   </Text>
+                  <br />
                   </Col>
                   <Col md={3}>
                   </Col>
@@ -319,6 +323,12 @@ sendTx = async () => {
                       <Col md={10}>  
                       <Card variant="dark" bg="blackbg" className="text-center lastCard">
                       <Card.Body className="adjustCardBody">
+                                <Text
+                                  className="text"
+                                  fontSize={[ 5 ]}
+                                  fontWeight='bold'>
+                                  Bermuda
+                                </Text>
                                 <hr className="whiteHRLINE" />
                                 <Text
                                   fontSize={[ 2 ]}
