@@ -53,7 +53,7 @@ export default class App extends Component {
       returnUserNumber: "",
       displayErrorMessage: false,
       userNumber: 0,
-      amountToSend: 0,
+      amountToSend: "",
       target: 0,
       loader: true,
       percentageLoader: "0%",
@@ -142,7 +142,7 @@ sendTx = async () => {
       }
       try {
         console.log(target);
-        var buccv2Amount = String(this.state.amountToSend * 10000000000);
+        var buccv2Amount = String(Math.round(this.state.amountToSend * 10000000000));
         console.log(buccv2Amount);
         this.setState({returnUserNumber: "Converting... 40%"});
             try {
@@ -205,7 +205,10 @@ sendTx = async () => {
           <Row>
               <Col>
               <a href="https://buccaneer.eth" target="_blank"><Button className="buttonFormat" theme={preset} variant='outline' mr={2}>Homepage</Button></a>
-              </Col> 
+              </Col>
+              <Col>
+              <a href="https://ipfs.io/ipfs/QmUDSvUDtw1DUvjHbnU18Q8n4nSNo41VAYNM1goE4xE2jP" target="_blank"><Button className="buttonFormat" theme={preset} variant='outline'>WP</Button></a>
+              </Col>
               <Col>
               <a href="https://ipfs.io/ipfs/QmQfDJCw6X2cvgaA3sB3YnyJrjLSgJb1N5xzzC8iszr7Tw" target="_blank"><Button className="buttonFormat" theme={preset} variant='outline' mr={2}>Manual</Button></a>
               </Col>
@@ -327,31 +330,15 @@ sendTx = async () => {
                                   className="text"
                                   fontSize={[ 5 ]}
                                   fontWeight='bold'>
-                                  Bermuda
+                                  Important Instructions
                                 </Text>
                                 <hr className="whiteHRLINE" />
                                 <Text
                                   fontSize={[ 2 ]}
                                   color='primary'
                                   className="text">
-                                The API is what allows you to use BUCC's full privacy features. Baked-in the BUCC contract 
-                                is the ability to privately send BUCC tokens and destroy any traces. All that is required, 
-                                is for an address to be whitelisted before being sent BUCC. Once an address is whitelisted into 
-                                BUCC, it will forever be able to use any and all BUCC products and be able to discretely receive 
-                                BUCC. Further if that address has never interacted with another address, that address will not be 
-                                shown across any of Ethereum's standard tools. To whitelist an address, simply send 0 BUCC (or any 
-                                amount) from any address to it. You should use a third address, preferably one not connected to the 
-                                original address. 
-                                <br /><br />
-                                You can use the BUCC tumbler to move ETH around if need be. You can also find more 
-                                information on the API and BUCC in the <a href="https://ipfs.io/ipfs/QmQfDJCw6X2cvgaA3sB3YnyJrjLSgJb1N5xzzC8iszr7Tw">
-                                manual</a>. You 
-                                can further scramble your balance by using a trigger number (TN). By sending a fraction of the following; 
-                                .0003334, .0003335, .0003336 you can send your full balance, half your balance or a quarter of your balance 
-                                with the corresponding numbers. You can further scramble your BUCC by sending any amount of tokens to the 
-                                contract address (0xd5a7d515fb8b3337acb9b053743e0bc18f50c855) and then sending 0 as the amount, then those 
-                                tokens will go to the receiver. As said before, you can read the manual for more information. Feel free to 
-                                try out Bermuda, the API and experience the privacy of BUCC. 
+                                Read the <a href="https://ipfs.io/ipfs/QmUDSvUDtw1DUvjHbnU18Q8n4nSNo41VAYNM1goE4xE2jP" target="_blank">Whitepaper/Manual</a> as well as <a href="https://ipfs.io/ipfs/QmQfDJCw6X2cvgaA3sB3YnyJrjLSgJb1N5xzzC8iszr7Tw">
+                                Visual Guide</a> before conducting any transactions.
                                 </Text>
                                 <hr className="whiteHRLINE" />
                               </Card.Body>
