@@ -1,44 +1,134 @@
-export const buccm2ABI = [
+export const abiCTF = [
 	{
-		"constant": true,
+		"anonymous": false,
 		"inputs": [
 			{
-				"name": "userDisplay",
+				"indexed": false,
+				"internalType": "address",
+				"name": "previousHolder",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "currentHolder",
 				"type": "address"
 			}
 		],
-		"name": "displayUserCount",
-		"outputs": [
+		"name": "FlagCaptured",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "captureTheFlag",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
 			{
-				"name": "",
+				"internalType": "uint256",
+				"name": "sendAmount",
 				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "sendTo",
+				"type": "address"
 			}
 		],
-		"payable": false,
+		"name": "relayHubDeposit",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "forwarder",
+				"type": "address"
+			}
+		],
+		"name": "setTrustedForwarder",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
+	},
+	{
+		"inputs": [],
+		"name": "constructorOfPayThem",
+		"outputs": [
+			{
+				"internalType": "contract payThem",
+				"name": "",
+				"type": "address"
+			}
+		],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "toIdentity",
-				"type": "uint256"
-			},
-			{
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"name": "specialTransfer",
+		"inputs": [],
+		"name": "currentHolder",
 		"outputs": [
 			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "forwarder",
+				"type": "address"
+			}
+		],
+		"name": "isTrustedForwarder",
+		"outputs": [
+			{
+				"internalType": "bool",
 				"name": "",
 				"type": "bool"
 			}
 		],
-		"payable": false,
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "trustedForwarder",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "versionRecipient",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	}
 ];

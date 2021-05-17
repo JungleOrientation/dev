@@ -4,6 +4,8 @@
   display: flex;
   justify-content: flex-end;
   width: 50%;
+  margin-top: 25% !important;
+  margin-bottom: 15% !important;
   margin: auto;
 }
 
@@ -11,24 +13,6 @@ body {
   background-color: black;
 }
 
-/* STANDARD IMPORTS */
-.shareButtonSpacing {
-  width: 2.5vh;
-  height: 2.5vh;
-  margin-right: .3vh;
-  margin-top: -3vw !important;
-}
-
-.text {
-  color: #C0C0C0 !important;
-  font-family: 'Noto Sans', sans-serif !important;
-}
-
-.input {
-  color: #C0C0C0 !important;
-  font-family: 'Noto Sans', sans-serif !important;
-}
- 
 .headerText {
   color: #C0C0C0 !important;
   font-family: 'Noto Sans', sans-serif !important;
