@@ -15,6 +15,8 @@ npm start
 ```
 Should be on localhost:3000
 
+The work of course is in the app.js file in the src folder
+
 ## The Error
 
 I have not setup a relay server and do not know how to connect to it. If plausible, use the testnet rinkeby which does have a relay server and if you can make a separate contract instance for mainnet, that would be great. There is an issue with BSC, which apparently does not have a relay server. We can discuss that later, to set one up for us. Whatever gas costs are associated with the mainnet contract deployment, let me know, we will of course cover these costs.
