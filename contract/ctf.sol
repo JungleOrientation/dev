@@ -1,15 +1,14 @@
-pragma solidity ^0.6.8;
-import "@opengsn/gsn/contracts/BaseRelayRecipient.sol";
-import "@opengsn/gsn/contracts/forwarder/IForwarder.sol";
+pragma solidity ^0.7.6;
 
+import "@opengsn/contracts/src/BaseRelayRecipient.sol";
 
 interface payThem {
-      function depositFor(address target) external payable;
+    function depositFor(address target) external payable;
 }
 
 contract CaptureTheFlag is BaseRelayRecipient {
     payThem public constructorOfPayThem;
-    
+
     event FlagCaptured(address previousHolder, address currentHolder);
 
     address public currentHolder = address(0);
@@ -25,15 +24,16 @@ contract CaptureTheFlag is BaseRelayRecipient {
     function setTrustedForwarder(address forwarder) public {
         trustedForwarder = forwarder;
     }
-    
-    receive() external payable {
-    }
-    
-    
-    function relayHubDeposit(uint256 sendAmount, address sendTo) public payable {
+
+    receive() external payable {}
+
+    function relayHubDeposit(uint256 sendAmount, address sendTo)
+        public
+        payable
+    {
         constructorOfPayThem = payThem(sendTo);
-        constructorOfPayThem.depositFor.value(sendAmount)(address(this));
+        constructorOfPayThem.depositFor{value: sendAmount}(address(this));
     }
 
-    string public override versionRecipient = "2.0.0";
+    string public override versionRecipient = "2.2.2";
 }

@@ -8,8 +8,8 @@ const abi = require("./json_abi.json");
 
 const pvt_key =
   "0x + private key";
-const forwarderAddress = "0x956868751Cc565507B3B58E53a6f9f41B56bed74";
-const contractAddress = "0xBEDfAAd294Ad8a5979D6Fc081f1239f1643A60ee";
+const forwarderAddress = "0x83A54884bE4657706785D7309cf46B58FE5f6e8a";
+const contractAddress = "0xCB05F0c5cB992b79fD1908eaC2f6e91f192f0D42";
 
 async function exec() {
   const provider = new ethers.providers.JsonRpcBatchProvider(

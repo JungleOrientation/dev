@@ -26,41 +26,6 @@ export const abiCTF = [
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "sendAmount",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "sendTo",
-				"type": "address"
-			}
-		],
-		"name": "relayHubDeposit",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "forwarder",
-				"type": "address"
-			}
-		],
-		"name": "setTrustedForwarder",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"stateMutability": "payable",
-		"type": "receive"
-	},
-	{
 		"inputs": [],
 		"name": "constructorOfPayThem",
 		"outputs": [
@@ -106,6 +71,37 @@ export const abiCTF = [
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "sendAmount",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "sendTo",
+				"type": "address"
+			}
+		],
+		"name": "relayHubDeposit",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "forwarder",
+				"type": "address"
+			}
+		],
+		"name": "setTrustedForwarder",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
 		"name": "trustedForwarder",
 		"outputs": [
@@ -130,5 +126,9 @@ export const abiCTF = [
 		],
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"stateMutability": "payable",
+		"type": "receive"
 	}
 ];
