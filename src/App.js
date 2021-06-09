@@ -17,14 +17,14 @@ import Web3 from "web3";
 import { abiCTF } from "./abi.js";
 
 //GSN TEST BASED ADDRESS
-const contractAddress = "0xBEDfAAd294Ad8a5979D6Fc081f1239f1643A60ee";
-const trustedForwarder = "0x956868751Cc565507B3B58E53a6f9f41B56bed74";
-const paymaster = "0x43d66E6Dce20264F6511A0e8EEa3f570980341a2";
+const contractAddress = "0xCB05F0c5cB992b79fD1908eaC2f6e91f192f0D42";
+const trustedForwarder = "0x83A54884bE4657706785D7309cf46B58FE5f6e8a";
+const paymaster = "0xA6e10aA9B038c9Cddea24D2ae77eC3cE38a0c016";
 
 /* 
 GSN RELATED FUNCTIONS
 */
-const { RelayProvider } = require("@opengsn/gsn");
+const { RelayProvider } = require("@opengsn/provider");
 
 export default class App extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ export default class App extends Component {
     //
     const config = {
       paymasterAddress: paymaster,
-      relayHubAddress: "0x53C88539C65E0350408a2294C4A85eB3d8ce8789",
+      relayHubAddress: "0x6650d69225CA31049DB7Bd210aE4671c0B1ca132",
       stakeManagerAddress: "0x6ef9595244c2Cd9BD89af56607283784b5a9499C",
       jsonStringifyRequest: true,
       chainId: window.ethereum.networkVersion,
@@ -86,7 +86,7 @@ export default class App extends Component {
     const contract_obj = this.state.GSNcontract;
     await contract_obj.methods
       .captureTheFlag()
-      .send({ from: this.state.accounts[0] });
+      .send({ from: this.state.accounts[0]});
   };
 
   render() {
